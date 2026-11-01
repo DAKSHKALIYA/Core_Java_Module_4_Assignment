@@ -1,0 +1,21 @@
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Q18_AdapterClassExample {
+    public static void main(String[] args) {
+
+        Frame f = new Frame("WindowAdapter Example");
+
+        f.setSize(400, 300);
+
+        f.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                f.dispose();
+                System.exit(0);
+            }
+        });
+
+        f.setVisible(true);
+    }
+}
